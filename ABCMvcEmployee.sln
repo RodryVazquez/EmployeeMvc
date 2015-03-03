@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABCMvcEmployee", "ABCMvcEmployee\ABCMvcEmployee.csproj", "{BCA72EF2-7FB0-4033-9EB6-9300FF51ADBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseContext", "DatabaseContext\DatabaseContext.csproj", "{6947DF06-3129-4B0D-AA7D-0B6CCD236C51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCA72EF2-7FB0-4033-9EB6-9300FF51ADBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA72EF2-7FB0-4033-9EB6-9300FF51ADBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA72EF2-7FB0-4033-9EB6-9300FF51ADBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA72EF2-7FB0-4033-9EB6-9300FF51ADBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6947DF06-3129-4B0D-AA7D-0B6CCD236C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6947DF06-3129-4B0D-AA7D-0B6CCD236C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6947DF06-3129-4B0D-AA7D-0B6CCD236C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6947DF06-3129-4B0D-AA7D-0B6CCD236C51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

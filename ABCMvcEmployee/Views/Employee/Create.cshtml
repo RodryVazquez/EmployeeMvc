@@ -1,0 +1,61 @@
+﻿@model ABCMvcEmployee.Models.EmployeeModel
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Create Employee</h2>
+<!--Panel-->
+<div class="panel panel-default">
+    <div class="panel-heading">Insert information</div>
+    <div class="panel-body">
+        @using (Html.BeginForm("CreateEmployee", "Employee", FormMethod.Post))
+        {
+            <!--Prevenimos ataques cross request,validamos el formulario-->
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <div class="col-md-10">
+                <span class="block input-icon input-icon-right">
+                    @Html.LabelFor(m => m.Name)
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Username" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </span>
+            </div>
+            <br />
+            <div class="col-md-10">
+                <span class="block input-icon input-icon-right">
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "LastName" })
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </span>
+            </div>
+            <br />
+            <div class="col-md-10">
+                <span class="block input-icon input-icon-right">
+                    @Html.LabelFor(m => m.SecurityNumber)
+                    @Html.TextBoxFor(m => m.SecurityNumber, new { @class = "form-control", placeholder = "Security Number" })
+                    @Html.ValidationMessageFor(m => m.SecurityNumber)
+                </span>
+            </div>
+            <br />
+            <div class="col-md-10">
+                <span class="block input-icon input-icon-right">
+                    @Html.LabelFor(m => m.DepartMent)
+                    @Html.TextBoxFor(m => m.DepartMent, new { @class = "form-control", placeholder = "Department" })
+                    @Html.ValidationMessageFor(m => m.DepartMent)
+                </span>
+            </div>
+            <!--Submit Values-->
+            <div class="col-md-10">
+                <br />
+                <input class="btn btn-default" type="submit" value="Guardar">
+            </div>
+            <!--Link to index-->
+            <div class="col-md-10">
+                <br />
+                @Html.ActionLink("Back", "Index", "Employee")
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,33 @@
+﻿@model List<ABCMvcEmployee.Models.EmployeeModel>
+@using GridMvc.Html
+<!--Titulo principal-->
+<h2>Employee Information</h2>
+<!--Panel-->
+<div class="panel panel-default">
+    <div class="panel-heading">Active Employees</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="row-same-height">
+                <!--Grid-->
+                @Html.Grid(Model).Named("EmployeeGrid").Columns(columns =>
+{
+    columns.Add(p => p.Name).Sortable(true).Titled("Nombre");
+    columns.Add(p => p.LastName).Sortable(true).Titled("Apellido");
+    columns.Add(p => p.SecurityNumber).Sortable(true).Titled("No.Social");
+    columns.Add(p => p.DepartMent).Sortable(true).Titled("Departamento");
+    columns.Add(m => m.EmployeeId)
+    .Titled("Edit")
+    .Sanitized(false)
+    .Encoded(false)
+    .RenderValueAs(d => Html.ActionLink("Edit", "Edit", "Employee", new { id = d.EmployeeId }, null));
+    columns.Add()
+    .Titled("Delete")
+    .Sanitized(false)
+    .Encoded(false)
+    .RenderValueAs(d => Html.ActionLink("Delete", "DeleteEmployee", "Employee", new { id = d.EmployeeId }, new { onclick = "return confirm('Esta seguro de borrar el elemento?');" }));
+}).WithPaging(5).Filterable(true)
+            </div>
+            @Html.ActionLink("Create", "Create", "Employee")
+        </div>
+    </div>
+</div>
